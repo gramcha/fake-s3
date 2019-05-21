@@ -28,13 +28,13 @@ module FakeS3
         license_message = """
 ======================
 As of version 1.3, Fake S3 requires a license key passed with --license YOUR_LICENSE_KEY.
-Please fix this before September 18, 2018.
+Please fix this before September 18, 2099.
 You can get a license at:
 https://supso.org/projects/fake-s3
 ======================
 
 """
-        licensing_required = Time.now > Time.utc(2018, 9, 19)
+        licensing_required = Time.now > Time.utc(2099, 9, 19)
         if licensing_required
           abort license_message
         else
